@@ -25,28 +25,36 @@ I
    ssh -i path/to/your-key.pem ec2-user@your-instance-ip
 
 4. ## Switch to Super User:
+    ```bash
     sudo su
 
 5. ## Update the Instance:
+    ```bash
     yum update -y
 
 6. ## Install Git:
+    ```bash
     yum install git -y
 
 7. ## Install Apache2 Web Server:
+    ```bash
     yum install httpd -y
 
 8. ## Start HTTPD Service:
+    ```bash
     systemctl start httpd
 
 9. ## Clone Web App:
+    ```bash
     git clone https://github.com/asfaqshekh/updatedresume.git
 
 10. ## Copy Files to Web Server Directory:
+    ```bash
     cp updatedresume/index.html /var/www/html
     cp updatedresume/readme.md /var/www/html
 
 11. ## Verify Files:
+    ```bash
     cd /var/www/html
     ls
 
