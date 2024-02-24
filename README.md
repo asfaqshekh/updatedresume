@@ -15,7 +15,7 @@ I
 2. ## Create EC2 Instance**:
    - Navigate to the EC2 dashboard.
    - Click on "Launch Instance".
-   - Choose "Amazon Linux 2 AMI" as the AMI.
+   - Choose "Ubuntu" as the AMI.
    - Select "t2.micro" as the instance type.
    - Follow the on-screen instructions to configure instance details, add storage, add tags, configure security groups, and review.
    - Launch the instance and select or create a new key pair to connect to the instance via SSH.
@@ -30,15 +30,15 @@ I
 
 5. ## Update the Instance:
     ```bash
-    yum update -y
+    apt-get update -y
 
 6. ## Install Git:
     ```bash
-    yum install git -y
+    apt-get install git -y
 
 7. ## Install Apache2 Web Server:
     ```bash
-    yum install httpd -y
+    apt-get install httpd -y
 
 8. ## Start HTTPD Service:
     ```bash
@@ -50,8 +50,10 @@ I
 
 10. ## Copy Files to Web Server Directory:
     ```bash
-    cp updatedresume/index.html /var/www/html
-    cp updatedresume/readme.md /var/www/html
+    cp index.html /var/www/html
+    cp readme.md /var/www/html
+    cp -r images /var/www/html
+    cp -r documents /var/www/html
 
 11. ## Verify Files:
     ```bash
